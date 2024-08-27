@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Kiiptrak</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_activity_auth_action">AuthActionActivity</string>
 </resources>

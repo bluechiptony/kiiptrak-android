@@ -1,4 +1,4 @@
-package ng.temedia.kiiptrak.ui.theme
+package ng.temedia.kiiptrak.activities.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -35,10 +35,9 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun KiiptrakTheme(
-    darkTheme: Boolean =false,
-//    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = false,
+    dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
