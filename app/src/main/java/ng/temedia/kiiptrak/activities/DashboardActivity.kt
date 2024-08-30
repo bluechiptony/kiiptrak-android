@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -20,8 +21,8 @@ class DashboardActivity : ComponentActivity() {
         setContent {
             KiiptrakTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting3(
-                        name = "Android",
+                    DashboardActivityControls(
+                        name = "James",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,17 +32,23 @@ class DashboardActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting3(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun DashboardActivityControls(name: String, modifier: Modifier = Modifier) {
+    Column {
+        AppTopBar(name = name, modifier =modifier)
+    }
 }
+
+
+@Composable
+fun AppTopBar(name:String, modifier: Modifier){
+    Text(text = "Hi, $name", modifier)
+}
+
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview3() {
+fun DashboardActivityControlsPreview() {
     KiiptrakTheme {
-        Greeting3("Android")
+        DashboardActivityControls("James")
     }
 }
